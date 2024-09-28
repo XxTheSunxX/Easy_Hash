@@ -32,14 +32,12 @@ def sha512():
     g = open(hash_list, 'w')
     
     for word in f:
-        # f.readlines()
-        word = word.strip('\n') #\r
+        word = word.strip('\n')
         print(word)
 
         h.update(word.encode())
         hashed_word = h.hexdigest()
         g.write(hashed_word)
-        # g.write("\n")
         
 
 def md5():
@@ -48,14 +46,13 @@ def md5():
     g = open(hash_list, 'w')
     
     for word in f:
-        # f.readlines()
-        word = word.strip('\n') #\r
+        word = word.strip('\n')
         print(word)
 
         h.update(word.encode())
         hashed_word = h.hexdigest()
         g.write(hashed_word)
-        # g.write("\n")
+        
 
 if __name__ == "__main__":
     main()
